@@ -1,0 +1,22 @@
+{{#searchResults}}
+    <div class="row search-list">
+        {{#.}}
+        <div class="3u">
+            {{#.}}
+            <div class="search-entity image full {{id}}">
+                <p class="search-entity-text">{{sentence}}</p>
+                <div class="feedback">
+                    {{^trending}}
+                        <a href="#" class="plus" title="Vote up">+</a>
+                        <a href="#" class="minus" title="Vote down">-</a>
+                    {{/trending}}
+                    {{#trending}}
+                        <span class="trending fa fa-twitter"></span>
+                    {{/trending}}
+                </div>
+            </div>
+            {{/.}}
+        </div>
+        {{/.}}
+    </div>
+{{/searchResults}}

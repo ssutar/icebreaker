@@ -1,0 +1,23 @@
+{{#questions}}
+    <div class="row search-list">
+        {{#.}}
+        <div class="6u">
+            {{#.}}
+            <div class="search-entity">
+                <form action="/questions/add" class="questions-form" method="post">
+                    <p class="search-entity-text"><strong>Age</strong> <span class="prop">{{Age}}</span></p>
+                    <p class="search-entity-text"><strong>Gender</strong> <span class="prop">{{Gender}}</span></p>
+                    <p class="search-entity-text"><strong>Relationship</strong>  <span class="prop">{{Relationship}}</span></p>
+                    <div class="feedback">
+                        <textarea name="answer"></textarea>
+                        <input type="text" class="text" name="tags" placeholder="Tags">
+                    </div>
+                    <input type="submit" class="button" value="Submit">
+                    <input type="hidden" name="questionId" value="{{QuestionId }}">
+                </form>
+            </div>
+            {{/.}}
+        </div>
+        {{/.}}
+    </div>
+{{/questions}}
